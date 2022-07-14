@@ -25,7 +25,8 @@ h1 {
 
 .reset-button,
 .eraser-button,
-.rainbow-button {
+.rainbow-button,
+.default-button {
   margin-bottom: 5px;
   padding: 10px;
   background-color: palegoldenrod;
@@ -34,5 +35,9 @@ h1 {
 
 .eraser-button {
   margin-left: 10px;
+  margin-right: 10px;
+}
+
+.rainbow-button {
   margin-right: 10px;
 }
