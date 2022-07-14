@@ -46,3 +46,11 @@ defaultButton.addEventListener("click", () => {
     });
   });
 });
+
+const resetButton = document.querySelector(".reset-button");
+resetButton.addEventListener("click", () => {
+  const sketchSquares = document.querySelectorAll(".container div");
+  sketchSquares.forEach((sketchSquare) => {
+    sketchSquare.style.backgroundColor = "white";
+  });
+});
