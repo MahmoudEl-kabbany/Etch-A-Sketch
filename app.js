@@ -54,3 +54,37 @@ resetButton.addEventListener("click", () => {
     sketchSquare.style.backgroundColor = "white";
   });
 });
+
+const resizeButton = document.querySelector(".resize-button");
+resizeButton.addEventListener("click", () => {
+  numSquares = parseInt(
+    prompt("How many squares do you want in new board (max 100 and min 1)")
+  );
+  while (Object.is(numSquares, NaN)) {
+    numSquares = parseInt(
+      prompt("Enter again; entry is empty or a string(max 100 and min 1)")
+    );
+  }
+  while (numSquares >= 101 || numSquares <= 0) {
+    numSquares = parseInt(
+      prompt("Enter again; number is out of range (max 100 and min 1)")
+    );
+  }
+  const sizeIndicator = document.querySelector("h6");
+  sizeIndicator.textContent = `Current size is ${numSquares}x${numSquares}`;
+  const sketchBoard = document.querySelector(".container");
+  while (sketchBoard.hasChildNodes()) {
+    sketchBoard.removeChild(sketchBoard.firstChild);
+  }
+  for (let i = 1; i <= numSquares; i++) {
+    for (let i = 1; i <= numSquares; i++) {
+      const sketchSquare = document.createElement("div");
+      sketchSquare.style.width = `${CONTAINER_WIDTH / numSquares}px`;
+      sketchSquare.style.height = `${CONTAINER_WIDTH / numSquares}px`;
+      sketchSquare.addEventListener("mouseover", () => {
+        sketchSquare.style.backgroundColor = "black";
+      });
+      sketchBoard.appendChild(sketchSquare);
+    }
+  }
+});

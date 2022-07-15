@@ -10,7 +10,8 @@ body {
   background-color: antiquewhite;
 }
 
-h1 {
+h1,
+h6 {
   color: brown;
 }
 
@@ -23,10 +24,7 @@ h1 {
   background-color: white;
 }
 
-.reset-button,
-.eraser-button,
-.rainbow-button,
-.default-button {
+.buttons-bar button {
   margin-bottom: 5px;
   padding: 10px;
   background-color: palegoldenrod;
@@ -38,6 +36,7 @@ h1 {
   margin-right: 10px;
 }
 
-.rainbow-button {
+.rainbow-button,
+.default-button {
   margin-right: 10px;
 }
